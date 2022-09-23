@@ -35,8 +35,13 @@ class PhotoGalleryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val response = PhotoRepository().fetchPhotos()
-            Log.d("PhotoGalleryFragment", "Response received: $response")
+            try {
+                val response = PhotoRepository().fetchPhotos()
+                Log.d("PhotoGalleryFragment", "Response received: $response")
+            } catch (ex: Exception) {
+                Log.e("PhotoGalleryFragment", "Failed to fetch gallery items", ex)
+            }
+
         }
     }
 
