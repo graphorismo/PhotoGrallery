@@ -12,7 +12,6 @@ import com.bignerdranch.android.photograllery.api.FlickrApi
 import com.bignerdranch.android.photograllery.databinding.FragmentPhotoGalleryBinding
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
-import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.create
 
 class PhotoGalleryFragment : Fragment() {
